@@ -117,4 +117,26 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 
-}); /* end of as page load scripts */
+});
+/* end of as page load scripts */
+
+
+/* top page scroll down animation */
+jQuery(function(){
+	jQuery('a[href^="#"]').on('click',function(e){
+
+		jQuery('html,body').animate({scrollTop:jQuery(jQuery(this).attr('href')).offset().top},790, 'linear');
+	});
+});
+
+/* end of top page scroll down animation */
+
+/* top page title animation */
+window.sr = scrollReveal();
+sr.reveal('.top.page.title',{
+	duration:2000,
+	origin:'top',
+	distance:'300px'
+})
+
+/* end of top page title animation */

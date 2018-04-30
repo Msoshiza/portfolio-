@@ -699,8 +699,8 @@ them however you see fit.
 
   .t-2of3 {
     float: left;
-    padding-right: 0.75em;
-    width: 66.66%; }
+    /*padding-right: 0.75em;*/
+    width: 100%; }
 
   .t-1of4 {
     float: left;
@@ -811,8 +811,8 @@ them however you see fit.
 
   .d-5of7 {
     float: left;
-    padding-right: 0.75em;
-    width: 71.4285715%; }
+    /*padding-right: 0.75em;*/
+    width: 100%; }
 
   .d-6of7 {
     float: left;
@@ -1358,6 +1358,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
+  display: none;
   background-color: #323944; }
 
 #logo {
@@ -1409,19 +1410,26 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  /*margin-top: 1.5em; */
+}
 
 .hentry {
-  background-color: white;
-  border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #cccccc; }
+  width: 100vw;
+  height: 100vh;
+  background-color:#D3D3D3;
+  /*border-radius: 3px;*/
+  /*margin-bottom: 1.5em;*/
+  /*border: 1px solid #cccccc;*/
+ }
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
+    display: none;
+    /*border-bottom: 1px solid #f8f9fa;*/
     padding: 1.5em; }
   .hentry footer {
+    display: none;
     padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    /*border-top: 1px solid #f8f9fa; */
+  }
     .hentry footer p {
       margin: 0; }
 
@@ -1448,7 +1456,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  padding: 1.5em 1.5em 0;
+  padding: 0;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1511,6 +1519,40 @@ POSTS & CONTENT STYLES
     padding: 1.5em;
     margin: 0 0 1.5em;
     border-radius: 3px; }
+
+  /*content-added-by-myself*/
+  .entry-content{
+    padding: 0;
+  }
+  .entry-content .top.page.article{
+    width: 100vw;
+    height: 100vh;
+  }
+  .entry-content .top.page.title, .top.page.second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+    margin: 0;
+  }
+
+  .entry-content #article-1{
+    background-image: url('../images/toppage/tppage-bc-img.jpg') !important;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+   .entry-content #aricle-2{
+
+   }
+   .entry-content #article-3{
+    background-color: yellow;
+   }
+   .entry-content #article-4{
+
+   }
+
+  /* end content-added-by-myself*/
 
 /* end .entry-content */
 .wp-caption {
@@ -1677,7 +1719,7 @@ COMMENT FORM STYLES
 ******************************************************************/
 .comment-respond {
   padding: 1.5em;
-  border-top: 1px solid #f8f9fa; }
+  border-: 1px solid #f8f9fa; }
 
 #reply-title {
   margin: 0; }
@@ -1734,6 +1776,7 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
+  display: none;
   clear: both;
   background-color: #323944;
   color: #f8f9fa; }
@@ -1744,7 +1787,7 @@ http://www.alistapart.com/articles/organizing-mobile/
 you'll want to style the footer nav
 a bit more in-depth. Remember to keep
 it simple because you'll have to
-override these styles for the desktop
+override these styles for the desk
 view.
 */
 /* end .footer-links */
@@ -1758,18 +1801,18 @@ tweeners.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: 481px and Up Stylesheet
-  
+
   This stylesheet is loaded for larger devices. It's set to
   481px because at 480px it would load on a landscaped iPhone.
   This isn't ideal because then you would be loading all those
   extra styles on that same mobile connection.
-  
+
   A word of warning. This size COULD be a larger mobile device,
   so you still want to keep it pretty light and simply expand
   upon your base.scss styles.
-  
+
   ******************************************************************/
   /*
   IMPORTANT NOTE ABOUT SASS 3.3 & UP
@@ -1780,6 +1823,10 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
+  /* Bootstrap nav style*/
+  .navbar-default{
+    display: none;
+  }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -1819,6 +1866,69 @@ tweeners.
       clear: both; }
 
   /* end .entry-content */
+
+  /*********************
+  TOP PAGE STYLES
+  *********************/
+  /* toppage first screen */
+  .top.page.title{
+    /*width: 65%;*/
+    margin: auto !important;
+  }
+
+  .top.page.title h1#title-1{
+    font-size: 600%;
+    color: #FFF;
+  }
+
+  .tpt-left{
+    margin-right: 43%;
+  }
+
+  /* end toppage first screen */
+
+  /* toppage second screen */
+  .tpt-a2-right, .tpt-a2-left{
+    width: 45%;
+  }
+
+  .tpt-a2-right{
+    float: right;
+    text-align: center;
+  }
+
+  .tpt-a2-left{
+    float: left;
+    margin: auto;
+    font-size: 20px;
+  }
+
+  .top.page.second img#tpa-profile{
+    border-radius: 380px;
+    width: 50%;
+    margin: 0;
+  }
+  /* end toppage second screen */
+
+  .tpa-scrolldown, .tpa-scrollup{
+    margin-bottom: -6em !important;
+  }
+
+   .scrolldown, .scrollup{
+     width: 10%;
+    margin: auto;
+   }
+
+   .scrolldown img{
+     width: 50%;
+   }
+
+   .scrollup img{
+     width: 50%;
+     transform: rotate(179deg);
+   }
+
+  /* end .top page */
   /*********************
   FOOTER STYLES
   *********************/
@@ -1837,15 +1947,15 @@ you can add resource intensive styles.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Tablet & Small Desktop Stylesheet
-  
+
   Here's where you can start getting into the good stuff.
   This size will work on iPads, other tablets, and desktops.
   So you can start working with more styles, background images,
   and other resources. You'll also notice the grid starts to
   come into play. Have fun!
-  
+
   ******************************************************************/
   /*********************
   GENERAL STYLES
@@ -1854,7 +1964,7 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    width:  100%; }
 
   /*********************
   HEADER STYLES
@@ -1925,7 +2035,9 @@ you can add resource intensive styles.
   SIDEBARS & ASIDES
   *********************/
   .sidebar {
-    margin-top: 2.2em; }
+    display: none;
+    /*margin-top: 2.2em;*/
+   }
 
   .widgettitle {
     border-bottom: 2px solid #444;
@@ -1978,29 +2090,29 @@ you can add resource intensive styles.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Desktop Stylsheet
-  
+
   This is the desktop size. It's larger than an iPad so it will only
   be seen on the Desktop.
-  
+
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 100%; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
+  Site Name:
+  Author:
+
   Stylesheet: Super Large Monitor Stylesheet
-  
+
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
-  
+
   ******************************************************************/ }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
@@ -2010,44 +2122,44 @@ query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
+  Site Name:
+  Author:
+
   Stylesheet: Retina Screens & Devices Stylesheet
-  
+
   When handling retina screens you need to make adjustments, especially
   if you're not using font icons. Here you can add them in one neat
   place.
-  
+
   ******************************************************************/
-  /* 
-  
-  EXAMPLE 
+  /*
+
+  EXAMPLE
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
   like this:
-  
+
   .icon {
   	width: 24px;
   	height: 24px;
   	background: url(img/test.png) no-repeat;
   }
-  
+
   For retina screens, we have to make some adjustments, so that image
   doesn't look blurry. So, taking into account the image above and the
   dimensions, this is what we would put in our retina stylesheet:
-  
+
   .icon {
   	background: url(img/test@2x.png) no-repeat;
   	background-size: 24px 24px;
   }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
+
+  So, you would create the same icon, but at double the resolution, meaning
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
+  the original dimensions and you are good to go.
+
   */ }
 /*********************
 PRINT STYLESHEET
@@ -2059,13 +2171,13 @@ be set to display none.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Print Stylesheet
-  
+
   This is the print stylesheet. There's probably not a lot
   of reasons to edit this stylesheet. If you want to
   though, go for it.
-  
+
   ******************************************************************/
   * {
     background: transparent !important;
@@ -2116,3 +2228,8 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
+
+
+    div {
+	/*border: 1px solid red ;*/
+    }

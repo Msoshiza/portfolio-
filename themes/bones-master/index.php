@@ -25,6 +25,8 @@
 								</header>
 
 								<section class="entry-content cf">
+									<?php get_template_part('navigation');?>
+							    <?php get_template_part('toppage')?>
 									<?php the_content(); ?>
 								</section>
 

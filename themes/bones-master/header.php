@@ -7,12 +7,15 @@
 
 	<head>
 		<meta charset="utf-8">
+		<!-- //bootstrap css -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<link rel="script" href="<?php echo get_template_directory_uri();?>/library/js/scripts.js">
+
 
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title><?php wp_title(''); ?></title>
-
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
@@ -30,6 +33,7 @@
             <meta name="theme-color" content="#121212">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
